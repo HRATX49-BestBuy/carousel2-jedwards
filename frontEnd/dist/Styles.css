@@ -262,10 +262,10 @@ svg {
   padding-inline-start: 40px;
 }
 
-.carouselBody2 {
+/* .carouselBody2 {
 
 
-}
+} */
 
 .liItemContainer2 {
 
@@ -280,10 +280,11 @@ svg {
 
   animation-delay: 1s;
   z-index: 16;
-
+  display: flexbox;
   padding-right: 15px;
   position: relative;
-  min-width: 165px;
+  min-width: 150px;
+  max-width: 190px;
 
   border-right: 1px solid #e0e6ef;
 }
@@ -334,11 +335,11 @@ svg {
   
 }
 
-.reviewsAndPriceDiv {
+/* .reviewsAndPriceDiv {
 
   max-height: 150px;
   height: 150px;
-}
+} */
 
 .review {
   grid-area: review;
@@ -379,7 +380,8 @@ svg {
 
 .stars {
   position: relative;
-  left: 0;
+  height: 22px;
+  left: 3px;
   right: 10px;
   display: inline-flex;
   transform: scale(0.90);
@@ -414,6 +416,30 @@ svg {
   -webkit-tap-highlight-color:rgba(0, 0, 0, 0);
 }
 
+.price {
+
+  font-size: 15px;
+  line-height: 18px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  vertical-align: middle;
+}
+
+.itemPrice {
+
+  box-sizing: border-box;
+  font-weight: 700;
+  font-family: 'Human BBY Web', Arial, Helvetica, sans-serif;
+}
+
+.buttonContainer2 {
+
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
 .addToCartButton {
 
   padding: 0 8px;
@@ -442,79 +468,5 @@ svg {
 }
 
 
-/* // ========================================
-// REUSED CSS
-// ======================================== */
 
 
-
-
-
-
-.itemContainer {
-
-  box-sizing: border-box;
-
-  width: 33.33333%;
-  visibility: visible;
-
-  padding: 0 0 0 15px;
-
-  white-space: normal;
-  display: inline-block;
-  list-style: none;
-  padding: 0 15px;
-  vertical-align: top;
-  margin-left: 0;
-}
-
-.itemBlock {
-
-  display: grid;
-  grid-template-areas:
-      "image name"
-      "image review"
-      "image price"
-      "image compare"
-      "image a2c";
-
-  /* -ms-grid-columns: 95px 15px auto; */
-  grid-template-columns: 95px auto;
-  grid-column-gap: 15px;
-  grid-row-gap: 8px;
-  /* -ms-grid-rows: auto 8px auto 8px auto 8px auto; */
-  grid-template-rows: repeat(4,auto);
-}
-
-.image {
-  grid-area: image;
-
-}
-
-.itemImage {
-
-  max-height: 95px;
-  max-width: 95px;
-  vertical-align: middle;
-  border: 0;
-  box-sizing: border-box;
-
-}
-
-
-
-
-
-.price {
-  grid-area: price;
-
-  font-size: 15px;
-  font-weight: 700;
-  line-height: 18px;
-}
-
-.itemPrice {
-
-  box-sizing: border-box;
-  font-family: 'Human BBY Web', Arial, Helvetica, sans-serif;
-}

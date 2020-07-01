@@ -15,7 +15,7 @@ const Item = (props) => {
             <div className="name">
                 <p className="itemName" onClick={() => props.getId(props.data.id)}>{props.data.product_name}</p>
             </div>
-            <div>
+            <div className="reviewsAndPriceDiv">
                 <ul className="review">
                     <li className="liReviews">
                         <div className="liDiv">
@@ -36,10 +36,12 @@ const Item = (props) => {
                     <span className="itemPrice">{'$' + props.data.regularPrice}</span>
                 </div>
             </div>
-            <button className="addToCartButton">
-                <i className="cartIcon"></i>
-                Add to Cart
-            </button>
+            <div className="buttonContainer2">
+                <button className="addToCartButton">
+                    <i className="cartIcon"></i>
+                    Add to Cart
+                </button>
+            </div>
         </div>
         </li>
         
