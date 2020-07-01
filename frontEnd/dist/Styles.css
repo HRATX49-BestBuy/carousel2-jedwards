@@ -64,102 +64,6 @@
 
 }
 
-.ulCarousel2 {
-
-  white-space: nowrap;
-  transition: transform .5s ease-in-out;
-  padding: 0;
-  margin-top: 0px;
-
-  display: flex;
-  list-style-type: disc;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  padding-inline-start: 40px;
-}
-
-.carouselBody2 {
-
-
-}
-
-.liItemContainer2 {
-
-  box-sizing: border-box;
-  max-width: 20%;
-  visibility: visible;
-  padding: 0 0 0 15px;
-  list-style: none;
-}
-
-.itemContainer2 {
-
-  animation-delay: 1s;
-  z-index: 16;
-
-  padding-right: 15px;
-  position: relative;
-  min-width: 165px;
-
-  border-right: 1px solid #e0e6ef;
-}
-
-.image2 {
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100px;
-
-  box-sizing: border-box;
-
-  color: #0457c8;
-
-  cursor: pointer;
-}
-
-.itemImage2 {
-  max-height: 100px;
-  max-width: 100%;
-}
-
-.addToCartButton {
-
-  padding: 0 8px;
-
-  border: 1px solid #0046be;
-  color: #0046be;
-  background: #fff;
-  text-decoration: none;
-
-  font-size: 15px;
-  height: 35px;
-  width: 149px;
-  line-height: normal;
-  cursor: pointer;
-  border-radius: 4px;
-  font-weight: 500;
-  text-align: center;
-  vertical-align: middle;
-  display: inline-block;
-  transition: all .3s ease-out 0s;
-}
-
-.cartIcon {
-
-  content: "\f129";
-}
-
-
-/* // ========================================
-// REUSED CSS
-// ======================================== */
-
-
-
-
 
 svg:not(:root) {
   overflow: hidden;
@@ -342,6 +246,211 @@ svg {
   -webkit-tap-highlight-color:rgba(0, 0, 0, 0);
 }
 
+.ulCarousel2 {
+
+  white-space: nowrap;
+  transition: transform .5s ease-in-out;
+  padding: 0;
+  margin-top: 0px;
+
+  display: flex;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+
+.carouselBody2 {
+
+
+}
+
+.liItemContainer2 {
+
+  box-sizing: border-box;
+  max-width: 20%;
+  visibility: visible;
+  padding: 0 0 0 15px;
+  list-style: none;
+}
+
+.itemContainer2 {
+
+  animation-delay: 1s;
+  z-index: 16;
+
+  padding-right: 15px;
+  position: relative;
+  min-width: 165px;
+
+  border-right: 1px solid #e0e6ef;
+}
+
+.image2 {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+
+  box-sizing: border-box;
+
+  color: #0457c8;
+
+  cursor: pointer;
+}
+
+.itemImage2 {
+  max-height: 100px;
+  max-width: 100%;
+  vertical-align: middle;
+  border: 0;
+}
+
+.name {
+  padding-top: 20px;
+  margin-bottom: 10px;
+}
+
+.itemName {
+
+  white-space: normal;
+  list-style: none;
+  max-height: 48px;
+  box-sizing: border-box;
+  color: #0457c8;
+  font-size: 13px;
+  overflow: hidden;
+  margin: 0px;
+  line-height: 17px;
+
+}
+
+.name:hover {
+
+  text-decoration: underline;
+  
+}
+
+.reviewsAndPriceDiv {
+
+  max-height: 150px;
+  height: 150px;
+}
+
+.review {
+  grid-area: review;
+  padding: 0px;
+}
+
+.ulReviews {
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-left: 0;
+  list-style: none;
+  margin-bottom: 0;
+  font-size: 8px;
+
+}
+
+.liDiv {
+
+  font-size: .75em;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  right: 5px;
+}
+
+.liReviews {
+
+  border-right: none;
+  position: relative;
+  right: 10px;
+  list-style: none;
+
+  
+}
+
+.stars {
+  position: relative;
+  left: 0;
+  right: 10px;
+  display: inline-flex;
+  transform: scale(0.90);
+}
+
+.totalReviews {
+  float: right;
+  font-size: 11px;
+  color: #0457c8;
+  cursor: pointer;
+  text-align: -webkit-match-parent;
+}
+
+.itemRating {
+
+  box-sizing:border-box;
+  color:rgb(4, 87, 200);
+  cursor:pointer;
+  display:block;
+  font-family:'Nunito', Arial, Helvetica, sans-serif;
+  font-size:11px;
+  height: auto;
+  line-height:normal;
+  list-style-image:none;
+  list-style-position:outside;
+  list-style-type:none;
+  text-align:right;
+  text-size-adjust: 100%;
+  visibility:visible;
+  white-space:normal;
+  width: 50%;
+  -webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+}
+
+.addToCartButton {
+
+  padding: 0 8px;
+
+  border: 1px solid #0046be;
+  color: #0046be;
+  background: #fff;
+  text-decoration: none;
+
+  font-size: 15px;
+  height: 35px;
+  width: 149px;
+  line-height: normal;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: 500;
+  text-align: center;
+  vertical-align: middle;
+  display: inline-block;
+  transition: all .3s ease-out 0s;
+}
+
+.cartIcon {
+
+  content: "\f129";
+}
+
+
+/* // ========================================
+// REUSED CSS
+// ======================================== */
+
+
+
+
+
+
 .itemContainer {
 
   box-sizing: border-box;
@@ -392,104 +501,9 @@ svg {
 
 }
 
-.name {
-  grid-area: name;
-  display: block;
-}
 
-.itemName {
 
-  white-space: normal;
-  list-style: none;
-  max-height: 48px;
-  box-sizing: border-box;
-  color: #0457c8;
-  font-size: 13px;
-  overflow: hidden;
-  margin: 0px;
-  line-height: 17px;
 
-}
-
-.name:hover {
-
-  text-decoration: underline;
-  
-}
-
-.review {
-  grid-area: review;
-  padding: 0px;
-}
-
-.ulReviews {
-
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  padding-left: 0;
-  list-style: none;
-  margin-bottom: 0;
-  font-size: 8px;
-
-}
-
-.liDiv {
-
-  font-size: .75em;
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  right: 5px;
-}
-
-.liReviews {
-
-  border-right: none;
-  position: relative;
-  right: 10px;
-  list-style: none;
-
-  
-}
-
-.stars {
-  position: relative;
-  left: 0;
-  right: 10px;
-  display: inline-flex;
-  transform: scale(0.80);
-}
-
-.totalReviews {
-  float: right;
-  font-size: 11px;
-  color: #0457c8;
-  cursor: pointer;
-  text-align: -webkit-match-parent;
-}
-
-.itemRating {
-
-  box-sizing:border-box;
-  color:rgb(4, 87, 200);
-  cursor:pointer;
-  display:block;
-  font-family:'Nunito', Arial, Helvetica, sans-serif;
-  font-size:11px;
-  height: auto;
-  line-height:normal;
-  list-style-image:none;
-  list-style-position:outside;
-  list-style-type:none;
-  text-align:right;
-  text-size-adjust: 100%;
-  visibility:visible;
-  white-space:normal;
-  width: 50%;
-  -webkit-tap-highlight-color:rgba(0, 0, 0, 0);
-}
 
 .price {
   grid-area: price;
