@@ -1,7 +1,9 @@
 #Carousel2 {
 
   width: 100%;
+  max-width: 1200px;
   float: left;
+
   position: relative;
   min-height: 1px;
   padding-left: 15px;
@@ -270,10 +272,13 @@ svg {
 .liItemContainer2 {
 
   box-sizing: border-box;
+  display: flex;
+  justify-content: center;
   max-width: 20%;
   visibility: visible;
   padding: 0 0 0 15px;
   list-style: none;
+  margin: 0;
 }
 
 .itemContainer2 {
@@ -281,10 +286,12 @@ svg {
   animation-delay: 1s;
   z-index: 16;
   display: flexbox;
+  justify-content: center;
   padding-right: 15px;
   position: relative;
   min-width: 150px;
-  max-width: 190px;
+  max-width: 100%;
+  margin: 0;
 
   border-right: 1px solid #e0e6ef;
 }
@@ -421,9 +428,27 @@ svg {
   font-size: 15px;
   line-height: 18px;
   margin-top: 10px;
+  margin-bottom: 2px;
+
+  vertical-align: middle;
+}
+
+.priceDiscount {
+
+  font-size: 15px;
+  line-height: 18px;
+  /* margin-top: 5px; */
   margin-bottom: 10px;
 
   vertical-align: middle;
+}
+
+.itemPriceDiscount {
+
+  box-sizing: border-box;
+  font-weight: 400;
+  font-family: 'Human BBY Web', Arial, Helvetica, sans-serif;
+  text-decoration: line-through;
 }
 
 .itemPrice {
@@ -436,7 +461,7 @@ svg {
 .buttonContainer2 {
 
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-content: center;
 }
 
