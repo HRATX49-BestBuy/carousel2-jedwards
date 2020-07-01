@@ -1,8 +1,7 @@
 import React, {useState} from 'react';
 import Rating from '@material-ui/lab/Rating';
-// import StarBorderIcon from '@material-ui/icons/StarBorder';
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import GradeOutlinedIcon from '@material-ui/icons/GradeOutlined';
-// import Typography from '@material-ui/core/Typography';
 
 const Item = (props) => {
 
@@ -41,8 +40,10 @@ const Item = (props) => {
             </div>
             <div className="buttonContainer2">
                 <button className="addToCartButton">
-                    <i className="cartIcon"></i>
-                    Add to Cart
+                    <div className="cartIcon">
+                        <ShoppingCartIcon />
+                        <h2 className="cartText">Add to Cart</h2>
+                    </div>
                 </button>
             </div>
         </div>
