@@ -35,7 +35,7 @@ const ItemCarousel = (props) => {
         <div className="carouselWrapper">
             <div className="carouselContent">
                 <div className="carouselHeader">
-                    <h2 className="peopleViewed">People also viewed<span className="xItems">(15 items)</span></h2>
+                    <h2 className="peopleViewed">People also viewed<span className="xItems">{'(' + props.data.length + ')'}</span></h2>
                 </div>
                 <div className="bottomLine"></div>
                     <button className="previousButton" onClick={() => previousItems(3)}>

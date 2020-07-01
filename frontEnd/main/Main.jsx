@@ -2,9 +2,6 @@ import React, {Component} from 'react';
 import ItemCarousel from './Components/ItemCarousel';
 import Axios from 'axios';
 import _ from 'underscore';
-
-// import data from '../../testData';
-
 class App extends Component {
   constructor(props) {
     super(props);
@@ -51,7 +48,7 @@ class App extends Component {
         console.error('error with getting products', err);
       })
   }
-
+  
   getId(event) {
 
     window.id = event;
