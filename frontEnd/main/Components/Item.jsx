@@ -1,28 +1,22 @@
 import React, {useState} from 'react';
 import Rating from '@material-ui/lab/Rating';
-import StarBorderIcon from '@material-ui/icons/StarBorder';
+// import StarBorderIcon from '@material-ui/icons/StarBorder';
 import GradeOutlinedIcon from '@material-ui/icons/GradeOutlined';
-import Typography from '@material-ui/core/Typography';
+// import Typography from '@material-ui/core/Typography';
 
 const Item = (props) => {
 
-    const [stars, setStars] = useState(props.data.customer_review_AVG);
-    console.log(stars)
     return (
-
-        <div className="itemContainer">
-            <div className="itemBlock">
-
-                <div className="image">
-                    <img className="itemImage" src={props.data.product_image} onClick={() => props.getId(props.data.id)}></img>
-                </div>
-
-                <div className="name">
-                    <p className="itemName" onClick={() => props.getId(props.data.id)}>{props.data.product_name}</p>
-                </div>
-
+        <li className="liItemContainer2">
+        <div className="itemContainer2">
+            <div className="image2">
+                <img className="itemImage2" src={props.data.product_image} onClick={() => props.getId(props.data.id)}></img>
+            </div>
+            <div className="name">
+                <p className="itemName" onClick={() => props.getId(props.data.id)}>{props.data.product_name}</p>
+            </div>
+            <div>
                 <ul className="review">
-
                     <li className="liReviews">
                         <div className="liDiv">
                             <i className="stars">
@@ -38,20 +32,17 @@ const Item = (props) => {
                         </div>
                     </li>
                 </ul>
-
                 <div className="price">
                     <span className="itemPrice">{'$' + props.data.regularPrice}</span>
                 </div>
-
-                <div type="compare">
-                    <label className="checkbox">
-                        <input type="checkbox"></input>
-                        <span></span>
-                    </label>
-                    <span className="compareSpan">Compare</span>
-                </div>
             </div>
+            <button className="addToCartButton">
+                <i className="cartIcon"></i>
+                Add to Cart
+            </button>
         </div>
+        </li>
+        
     )
 }
 

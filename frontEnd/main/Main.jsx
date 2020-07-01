@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import ItemCarousel from './Components/ItemCarousel';
+import ItemCarousel2 from './Components/ItemCarousel';
 import Axios from 'axios';
 import _ from 'underscore';
 class App extends Component {
@@ -11,7 +11,6 @@ class App extends Component {
       loaded: false,
     }
 
-    this.seedDB = this.seedDB.bind(this);
     this.getProducts = this.getProducts.bind(this);
     this.renderCarousel = this.renderCarousel.bind(this);
     this.getId = this.getId.bind(this);
@@ -21,19 +20,6 @@ class App extends Component {
 
     this.getProducts();
 
-  }
-
-  seedDB() {
-
-    Axios.get('/seed')
-      .then( res => {
-
-        console.log('database seeded');
-      })
-      .catch( err => {
-
-        console.error('error with seeding database', err);
-      })
   }
 
   getProducts() {
@@ -60,7 +46,7 @@ class App extends Component {
 
     return(
       <div>
-        <ItemCarousel data={this.state.products} getId={this.getId}/>
+        <ItemCarousel2 data={this.state.products} getId={this.getId}/>
       </div>
     )
   }

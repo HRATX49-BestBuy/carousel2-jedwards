@@ -28,6 +28,5 @@ const getProducts = (callback) => {
 }
 
 module.exports = {
-  seedDatabase,
   getProducts
 }

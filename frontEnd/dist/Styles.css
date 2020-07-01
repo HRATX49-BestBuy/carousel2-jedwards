@@ -1,8 +1,4 @@
-/* font-family: 'Questrial', sans-serif;
-font-family: 'Roboto', sans-serif;
-font-family: 'Sarabun', sans-serif; */
-
-#root {
+#Carousel2 {
 
   width: 100%;
   float: left;
@@ -18,123 +14,152 @@ font-family: 'Sarabun', sans-serif; */
   font-family: 'Nunito', Arial, Helvetica, sans-serif;
 }
 
-.carouselWrapper {
+.mainContainer2 {
 
-  min-width: 730px;
+  min-width: 1000px;
   padding: 0 15px;
   overflow: hidden;
-  box-sizing: border-box;
   display: block;
 }
 
-.allCarouselContent {
+.carouselContainer2 {
 
-  box-sizing: border-box; 
-  display: block;  
+  box-sizing: border-box;
+  display: inline-block;
+  width: 100%;
+  /* max-width: 1000px; */
+
 }
 
 .carouselHeader {
 
-  display: flex;
-  justify-content: start;
-  align-items: center;
-}
-
-.peopleViewed {
-
-  display: inline-flex;
-  align-items: center;
-}
-
-h2 {
-
-  min-height: 30px;
-  margin-top: 0;
-  margin-bottom: 0;
-  min-width: 45%;
-  float: left;
-  font-size: 20px;
-  font-weight: 700;
-  font-family: inherit;
-  color: inherit;
   margin: 0;
+  padding: 0;
   line-height: normal;
+}
+
+.bottomLine2 {
+
+  border: solid #c5cbd5;
+  border-width: 0 0 1px;
   display: block;
-
 }
 
-.xItems {
+.carouselBody2 {
 
-  float: right;
-  top: 2px;
-  font-weight: 300;
-  font-size: 14px;
-  box-sizing: border-box;
-  margin-left: 5px;
-}
-
-.bottomLine {
-
-  border-bottom-color:rgb(197, 203, 213);
-  border-bottom-style:solid;
-  border-bottom-width:1px;
-  border-image-outset:0px;
-  border-image-repeat:stretch;
-  border-image-slice:100%;
-  border-image-source:none;
-  border-image-width:1;
-  border-left-color:rgb(197, 203, 213);
-  border-left-style:solid;
-  border-left-width:0px;
-  border-right-color:rgb(197, 203, 213);
-  border-right-style:solid;
-  border-right-width:0px;
-  border-top-color:rgb(197, 203, 213);
-  border-top-style:solid;
-  border-top-width:0px;
-  box-sizing:border-box;
-  color:rgb(4, 12, 19);
-  display:block;
-  font-family:'Nunito', Arial, Helvetica, sans-serif;
-  font-size:13px;
-  height:1px;
-  line-height:normal;
-  text-size-adjust:100%;
-  width:100%;
-  margin-bottom: 15px;
-  -webkit-tap-highlight-color:rgba(0, 0, 0, 0);
-}
-
-.carouselContent {
-
+  font-size: 13px;
+  line-height: normal;
+  color: #040c13;
+  font-family: Human BBY Web,Arial,Helvetica,sans-serif;
   position: relative;
   margin-bottom: 15px;
-  display: block;
+}
+
+.carouselChildWrapper2 {
+
+  display: flex;
+  margin: 0 50px;
+  overflow: hidden;
   box-sizing: border-box;
 
 }
 
-.ulWrapper {
+.ulCarousel2 {
 
-  margin: 0 50px;
-  overflow: hidden;
-  display: block;
-}
+  white-space: nowrap;
+  transition: transform .5s ease-in-out;
+  padding: 0;
+  margin-top: 0px;
 
-.carouselList {
-
-  display: block;
+  display: flex;
   list-style-type: disc;
   margin-block-start: 1em;
   margin-block-end: 1em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
   padding-inline-start: 40px;
-
-  white-space: nowrap;
-  transition: transform .5s ease-in-out;
-  padding: 0;
 }
+
+.carouselBody2 {
+
+
+}
+
+.liItemContainer2 {
+
+  box-sizing: border-box;
+  max-width: 20%;
+  visibility: visible;
+  padding: 0 0 0 15px;
+  list-style: none;
+}
+
+.itemContainer2 {
+
+  animation-delay: 1s;
+  z-index: 16;
+
+  padding-right: 15px;
+  position: relative;
+  min-width: 165px;
+
+  border-right: 1px solid #e0e6ef;
+}
+
+.image2 {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+
+  box-sizing: border-box;
+
+  color: #0457c8;
+
+  cursor: pointer;
+}
+
+.itemImage2 {
+  max-height: 100px;
+  max-width: 100%;
+}
+
+.addToCartButton {
+
+  padding: 0 8px;
+
+  border: 1px solid #0046be;
+  color: #0046be;
+  background: #fff;
+  text-decoration: none;
+
+  font-size: 15px;
+  height: 35px;
+  width: 149px;
+  line-height: normal;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: 500;
+  text-align: center;
+  vertical-align: middle;
+  display: inline-block;
+  transition: all .3s ease-out 0s;
+}
+
+.cartIcon {
+
+  content: "\f129";
+}
+
+
+/* // ========================================
+// REUSED CSS
+// ======================================== */
+
+
+
+
 
 svg:not(:root) {
   overflow: hidden;
@@ -479,89 +504,3 @@ svg {
   box-sizing: border-box;
   font-family: 'Human BBY Web', Arial, Helvetica, sans-serif;
 }
-
-.compare {
-
-  grid-area: compare;
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  color: #0046be;
-}
-
-.compareSpan {
-
-  position: relative;
-  bottom: 6.5px;
-  left: 2px; 
-  font-size: 13px;
-  font-family: Human BBY Web,Arial,Helvetica,sans-serif;
-  font-weight: 250;
-  color: #0046be;
-}
-
-.checkbox {
-
-  display: inline-flex;
-  cursor: pointer;
-  position: relative;
-  transition: transform .1s ease-out,-webkit-transform .1s ease-out;
-  color: #0046be;
-  content: "\f00c";
-  font-family: 'bbyicons';
-  display: inline-block;
-  font-weight: 400;
-  font-style: normal;
-  text-decoration: inherit;
-}
-
-.checkbox > span {
-
-  background-image: none;
-  background-color: #fff;
-}
-
-.checkbox > input {
-
-  content: "";
-  height: 16px;
-  width: 16px;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -o-appearance: none;
-  appearance: none;
-  border: solid #55555a;
-  border-width: 1px 1px 2px;
-  border-radius: 4px;
-  outline: none;
-  transition-duration: 0.3s;
-  background-image: -webkit-linear-gradient(315deg,#fff,#fff 50%,#e0e6ef 0,#e0e6ef);
-  background-image: linear-gradient(135deg,#fff,#fff 50%,#e0e6ef 0,#e0e6ef);
-  cursor: pointer;
-}
-
-.checkbox > input:hover {
-  background-image: none;
-  background-color: #fff;
-}
-
-.checkbox > input:checked{
-  background-image: none;
-  background-color: #fff;
-}
-
-.checkbox > input:checked + span::before {
-
-  content: "\f00c";
-  font-weight: 900;
-  display: block;
-  font-family: 'FontAwesome';
-  text-align: center;
-  color: #0046be;
-  position: absolute;
-  line-height: 16px;
-  font-size: 17px;
-  left: 5px;
-  bottom: 8px
-}
-
