@@ -391,7 +391,7 @@ svg {
   left: 3px;
   right: 10px;
   display: inline-flex;
-  transform: scale(0.90);
+  /* transform: scale(1.1); */
 }
 
 .totalReviews {
@@ -469,6 +469,7 @@ svg {
 
   display: flexbox;
   align-content: center;
+  justify-content: space-around;
   padding: 0 8px;
   border: 1px solid #0046be;
   color: #0046be;
@@ -489,23 +490,17 @@ svg {
 
 .cartIcon {
 
-  /* display: flex;
-  align-items: center; */
-
-}
-
-.MuiSvgIcon-root {
-
   float: left;
-  transform: scale(.65, .55);
   position: relative;
-  bottom: 1px;
-  left: 10px;
+  left: 8px;
+  transform: scale(.65);
 }
 
 .cartText {
+  float: right;
   position: relative;
-  top: 3px;
+  top: 5px;
+  right: 12px;
   font-size: 15px;
   font-family: 'Human BBY Web', Arial, Helvetica, sans-serif;
   margin: 0px;

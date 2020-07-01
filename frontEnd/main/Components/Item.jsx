@@ -41,9 +41,9 @@ const Item = (props) => {
             <div className="buttonContainer2">
                 <button className="addToCartButton">
                     <div className="cartIcon">
-                        <ShoppingCartIcon />
-                        <h2 className="cartText">Add to Cart</h2>
+                        <ShoppingCartIcon fontSize="15" />
                     </div>
+                    <h2 className="cartText">Add to Cart</h2>
                 </button>
             </div>
         </div>
