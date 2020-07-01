@@ -32,7 +32,7 @@ const Item = (props) => {
                     </li>
                 </ul>
                 <div className="price">
-                    <span className="itemPrice">{'$' + (Math.floor(props.data.regularPrice * .75)) + '.99'}</span>
+                    <span className="itemPrice">{'$' + (Math.floor(props.data.regularPrice * .20)) + '.99'}</span>
                 </div>
                 <div className="priceDiscount">
                     <span className="itemPriceDiscount">{'$' + props.data.regularPrice}</span>
