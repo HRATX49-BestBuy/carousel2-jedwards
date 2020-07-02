@@ -7,8 +7,8 @@ const ItemCarouselBottom = (props) => {
     let itemArray = Array.from(props.data);
 
     const [ index, setIndex ] = useState(0);
-    const [ endex, setEndex ] = useState(5);
-    const [ carouselData, setCarouselData ] = useState(itemArray.slice(index, endex));
+    const [ endIndex, setEndIndex ] = useState(5);
+    const [ carouselData, setCarouselData ] = useState(itemArray.slice(index, endIndex));
 
 //========================================================================
 // functions for controlling the arrow buttons on the side of the carousel
@@ -17,18 +17,18 @@ const ItemCarouselBottom = (props) => {
         
         if (endex <= 94) {
             setIndex(index + 5);
-            setEndex(endex + 5);
+            setEndIndex(endIndex + 5);
         }
-        setCarouselData(itemArray.slice(index, endex));
+        setCarouselData(itemArray.slice(index, endIndex));
     }
 
     const previousItems = () => {
 
         if (index >= 5) {
             setIndex(index - 5);
-            setEndex(endex - 5);
+            setEndIndex(endIndex - 5);
         }
-        setCarouselData(itemArray.slice(index, endex));
+        setCarouselData(itemArray.slice(index, endIndex));
     }
 
     return (

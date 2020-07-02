@@ -6,29 +6,29 @@ const ItemCarouselTop = (props) => {
     // index variable for helping to control what items are currently being viewed
     let itemArray = Array.from(props.data);
 
-    const [index, setIndex] = useState(0);
-    const [endex, setEndex] = useState(5);
-    const [carouselData, setCarouselData] = useState(itemArray.slice(index, endex));
+    const [ index, setIndex ] = useState(0);
+    const [ endIndex, setEndIndex ] = useState(5);
+    const [ carouselData, setCarouselData ] = useState(itemArray.slice(index, endIndex));
 
 //========================================================================
 // functions for controlling the arrow buttons on the side of the carousel
 //========================================================================
     const nextItems = () => {
-        console.log('clicked')
+        
         if (endex <= 94) {
             setIndex(index + 5);
-            setEndex(endex + 5);
+            setEndIndex(endIndex + 5);
         }
-        setCarouselData(itemArray.slice(index, endex));
+        setCarouselData(itemArray.slice(index, endIndex));
     }
 
     const previousItems = () => {
-        console.log('clicked')
+
         if (index >= 5) {
             setIndex(index - 5);
-            setEndex(endex - 5);
+            setEndIndex(endIndex - 5);
         }
-        setCarouselData(itemArray.slice(index, endex));
+        setCarouselData(itemArray.slice(index, endIndex));
     }
 
     return (
