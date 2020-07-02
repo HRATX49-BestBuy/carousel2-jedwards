@@ -1,8 +1,10 @@
 #Carousel2 {
 
+  display: flexbox;
+  flex-direction: column;
+  justify-content: center;
   width: 100%;
   max-width: 1200px;
-  float: left;
 
   position: relative;
   min-height: 1px;
@@ -76,6 +78,8 @@
 
 .carouselBody2 {
 
+  display: inline-flex;
+  justify-content: center;
   font-size: 13px;
   line-height: normal;
   color: #040c13;
