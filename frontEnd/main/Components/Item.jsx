@@ -7,13 +7,17 @@ const Item = (props) => {
 
     const [added, setAdded] = useState('Add to Cart');
     const [showing, setShowing] = useState('visible');
-    const [clicked, setClicked] = useState({})
+    const [clicked, setClicked] = useState({});
 
     return (
         <li className="liItemContainer2">
         <div className="itemContainer2">
             <div className="image2">
-                <img className="itemImage2" src={props.data.product_image} onClick={() => props.getId(props.data.id)}></img>
+                <img className="itemImage2" 
+                     src={props.data.product_image} 
+                     onClick={() => props.getId(props.data.id)}>
+                        
+                </img>
             </div>
             <div className="name">
                 <p className="itemName" onClick={() => props.getId(props.data.id)}>{props.data.product_name}</p>
@@ -54,9 +58,9 @@ const Item = (props) => {
                 })
             }}>
                 <div className="cartIcon" style={{visibility: showing}}>
-                <ShoppingCartIcon />
+                    <ShoppingCartIcon />
                 </div>
-                    <h2 className="cartText">{added}</h2>
+                <h2 className="cartText">{added}</h2>
                 </button>
             </div>
         </div>

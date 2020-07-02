@@ -28,8 +28,10 @@ class App extends Component {
 
     Axios.get('/products')
       .then( res => {
+
         let products = _.shuffle(res.data);
         let otherProducts = _.shuffle(res.data);
+
         this.setState({products: products, otherProducts: otherProducts}, () => this.setState({loaded: true}));
       })
       .catch( err => {
@@ -59,8 +61,10 @@ class App extends Component {
 
       return (
         
-        <div className="mainContainer">
+        <div className="mainContainer2">
+          <img src="/assets/boughtTogether.png" className="boughtTogether"></img>
           {this.state.loaded === true ? this.renderCarousel() : null}
+          <img src="/assets/footer.png" className="footer"></img>
         </div>
       )
 
