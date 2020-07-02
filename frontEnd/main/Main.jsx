@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import ItemCarousel2 from './Components/ItemCarousel';
+import ItemCarouselTop from './Components/ItemCarouselTop';
+import ItemCarouselBottom from './Components/ItemCarouselBottom';
 import Axios from 'axios';
 import _ from 'underscore';
 class App extends Component {
@@ -8,6 +9,7 @@ class App extends Component {
     this.state = {
 
       products: [],
+      otherProducts: [],
       loaded: false,
     }
 
@@ -27,7 +29,8 @@ class App extends Component {
     Axios.get('/products')
       .then( res => {
         let products = _.shuffle(res.data);
-        this.setState({products: products}, () => this.setState({loaded: true}));
+        let otherProducts = _.shuffle(res.data);
+        this.setState({products: products, otherProducts: otherProducts}, () => this.setState({loaded: true}));
       })
       .catch( err => {
 
@@ -46,7 +49,8 @@ class App extends Component {
 
     return(
       <div>
-        <ItemCarousel2 data={this.state.products} getId={this.getId}/>
+        <ItemCarouselTop data={this.state.products} getId={this.getId}/>
+        <ItemCarouselBottom data={this.state.otherProducts} getId={this.getId}/>
       </div>
     )
   }

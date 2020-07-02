@@ -5,6 +5,10 @@ import GradeOutlinedIcon from '@material-ui/icons/GradeOutlined';
 
 const Item = (props) => {
 
+    const [added, setAdded] = useState('Add to Cart');
+    const [showing, setShowing] = useState('visible');
+    const [clicked, setClicked] = useState({})
+
     return (
         <li className="liItemContainer2">
         <div className="itemContainer2">
@@ -39,11 +43,20 @@ const Item = (props) => {
                 </div>
             </div>
             <div className="buttonContainer2">
-                <button className="addToCartButton">
-                    <div className="cartIcon">
-                        <ShoppingCartIcon fontSize="15" />
-                    </div>
-                    <h2 className="cartText">Add to Cart</h2>
+            <button className="addToCartButton" style={clicked} onClick={() => {
+                setAdded('Added to Cart')
+                setShowing('hidden')
+                setClicked({
+                
+                    color: '#55555a',
+                    backgroundColor: '#c5cbd5',
+                    borderColor: '#c5cbd5'
+                })
+            }}>
+                <div className="cartIcon" style={{visibility: showing}}>
+                <ShoppingCartIcon />
+                </div>
+                    <h2 className="cartText">{added}</h2>
                 </button>
             </div>
         </div>
@@ -53,3 +66,5 @@ const Item = (props) => {
 }
 
 export default Item;
+
+

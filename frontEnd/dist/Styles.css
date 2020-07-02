@@ -506,6 +506,20 @@ svg {
   transition: all .3s ease-out 0s;
 }
 
+.addToCartButton:hover {
+
+  color: white;
+  background-color: #001e73;
+}
+
+.addToCartButton:target {
+
+  cursor: not-allowed!important;
+  color: #55555a!important;
+  border-color: #c5cbd5!important;
+  background-color: #c5cbd5!important;
+}
+
 .cartIcon {
 
   float: left;
