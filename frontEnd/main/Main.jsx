@@ -26,7 +26,7 @@ class App extends Component {
 
   getProducts() {
 
-    Axios.get('/products')
+    Axios.get('/products2')
       .then( res => {
 
         let products = _.shuffle(res.data);
