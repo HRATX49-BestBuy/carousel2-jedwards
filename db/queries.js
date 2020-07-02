@@ -1,6 +1,6 @@
 const mysql = require('mysql');
 const connection = mysql.createConnection({
-  host: 'aa38ugi7pcuwxd.czkwyvdb9mxc.us-east-2.rds.amazonaws.com' || 'localhost',
+  host: 'aaflz4oqzh0le0.czkwyvdb9mxc.us-east-2.rds.amazonaws.com' || 'localhost',
   user: 'root',
   password: 'Unlucky1!',
   database: 'products',
