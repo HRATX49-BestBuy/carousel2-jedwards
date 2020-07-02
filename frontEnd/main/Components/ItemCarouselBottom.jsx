@@ -40,8 +40,8 @@ const ItemCarouselBottom = (props) => {
                 <div className="bottomLine2"></div>
                 <div className="carouselBody2">
                     <div className="carouselChildWrapper2">
-                    <button className="previousButton">
-                        <svg className="svgLeft"><path className="pathLeft" onClick={() => previousItems()}></path></svg>
+                    <button className="previousButton" onClick={() => previousItems()}>
+                        <svg className="svgLeft"><path className="pathLeft"></path></svg>
                     </button>
                         <ul className="ulCarousel2">
                         {carouselData.map((item, i) => {
@@ -51,8 +51,8 @@ const ItemCarouselBottom = (props) => {
                             )
                         })}
                         </ul>
-                    <button className="nextButton">
-                        <svg className="svgRight"><path className="pathRight" onClick={() => nextItems()}></path></svg>
+                    <button className="nextButton" onClick={() => nextItems()}>
+                        <svg className="svgRight"><path className="pathRight"></path></svg>
                     </button>
                     </div>
                 </div>
