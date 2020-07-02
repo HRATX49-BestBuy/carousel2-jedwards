@@ -15,7 +15,7 @@ var _require = require('http-proxy-middleware'),
 
 app.use(express["static"](path.join(__dirname, '../frontEnd/dist')));
 app.use(express.json());
-app.get('/products', function (req, res) {
+app.get('/products2', function (req, res) {
   dbquery.getProducts(function (error, result) {
     if (error) {
       console.error('error at endpoint with getting products', error);

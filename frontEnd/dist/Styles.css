@@ -16,6 +16,13 @@
   font-family: 'Nunito', Arial, Helvetica, sans-serif;
 }
 
+.componentContainer {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .mainContainer2 {
 
   display: flex;
