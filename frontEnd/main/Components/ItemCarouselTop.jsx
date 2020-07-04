@@ -7,14 +7,14 @@ const ItemCarouselTop = (props) => {
 
   // index variable for helping to control what items are currently being viewed
   let itemArray = Array.from(props.data);
-  itemArray = itemArray.slice(0, 24);
+  itemArray = itemArray.slice(0, 14);
 
   const [index, setIndex] = useState(1);
   var scrollIndex = index;
   // const [endIndex, setendIndex] = useState(9);
   const [carouselData, setCarouselData] = useState(itemArray);
   // const [carouselData, setCarouselData] = useState(itemArray.slice(index, endIndex));
-  const spot = [0, 1065, 2130, 3295, 4360];
+  const spot = [0, 1020, 2040]; 
   const [scroll, setScroll] = useState(spot[1]);
   
 //========================================================================
@@ -27,9 +27,9 @@ const ItemCarouselTop = (props) => {
 
         scrollIndex++;
     
-        if(scrollIndex > 4) {
+        if(scrollIndex > 2) {
     
-            scrollIndex = 3;
+            scrollIndex = 1;
         }
     
         setScroll(spot[scrollIndex]);
@@ -65,7 +65,7 @@ const ItemCarouselTop = (props) => {
         <div className="mainContainer2">
             <div className="carouselContainer2">
                 <div className="carouselHeader2">
-                    <h2 className="peopleAlsoBought">Most-viewed sponsored products<span className="xItems2">{'(' + props.data.length + ')'}</span></h2>
+                    <h2 className="peopleAlsoBought">Most-viewed sponsored products<span className="xItems2">{'(' + carouselData.length + ')'}</span></h2>
                 </div>
                 <div className="bottomLine2"></div>
                 <div className="carouselBody2">
