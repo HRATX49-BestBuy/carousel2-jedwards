@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import Item from './Item.jsx';
+import $ from 'jquery';
  
 const ItemCarouselTop = (props) => {
 
@@ -36,6 +37,8 @@ const ItemCarouselTop = (props) => {
         
         setIndex(scrollIndex);
         console.log('scroll value', scroll);
+
+        
     }
 
     const previousItems = () => {
@@ -53,7 +56,7 @@ const ItemCarouselTop = (props) => {
         setIndex(scrollIndex);
         console.log('scroll value', scroll);
 
-        $(".carouselList").animate({scrollLeft: scroll});
+        $(".ulCarousel2").animate({scrollLeft: scroll});
 
     }
 
