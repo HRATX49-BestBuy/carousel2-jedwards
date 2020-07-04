@@ -92,7 +92,8 @@
 
   display: flex;
   margin: 0 50px;
-  overflow: hidden;
+  max-width: 1200px;
+  overflow-x: scroll;
   box-sizing: border-box;
 
 }
@@ -305,16 +306,28 @@ svg {
   padding-inline-start: 0px;
 }
 
-/* .carouselBody2 {
+.ulCarousel3 {
 
+  white-space: nowrap;
+  transition: transform .5s ease-in-out;
+  padding: 0;
+  margin-top: 0px;
 
-} */
+  display: flex;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 0px;
+}
 
 .liItemContainer2 {
 
   box-sizing: border-box;
   display: flex;
   justify-content: center;
+  min-width: 200px;
   max-width: 20%;
   visibility: visible;
   padding: 0 0 0 15px;
@@ -330,8 +343,9 @@ svg {
   justify-content: center;
   padding-right: 15px;
   position: relative;
-  min-width: 150px;
-  max-width: 100%;
+  min-width: 174px;
+  width: 200px;
+  max-width: 205px;
   margin: 0;
 
   border-right: 1px solid #e0e6ef;

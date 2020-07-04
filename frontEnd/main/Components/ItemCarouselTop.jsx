@@ -3,33 +3,60 @@ import Item from './Item.jsx';
  
 const ItemCarouselTop = (props) => {
 
-    // index variable for helping to control what items are currently being viewed
-    let itemArray = Array.from(props.data);
 
-    const [ index, setIndex ] = useState(0);
-    const [ endIndex, setEndIndex ] = useState(5);
-    const [ carouselData, setCarouselData ] = useState(itemArray.slice(index, endIndex));
+  // index variable for helping to control what items are currently being viewed
+  let itemArray = Array.from(props.data);
+  itemArray = itemArray.slice(0, 24);
 
+  const [index, setIndex] = useState(1);
+  var scrollIndex = index;
+  // const [endIndex, setendIndex] = useState(9);
+  const [carouselData, setCarouselData] = useState(itemArray);
+  // const [carouselData, setCarouselData] = useState(itemArray.slice(index, endIndex));
+  const spot = [0, 1065, 2130, 3295, 4360];
+  const [scroll, setScroll] = useState(spot[1]);
+  
 //========================================================================
 // functions for controlling the arrow buttons on the side of the carousel
 //========================================================================
     const nextItems = () => {
+        // starts at 0 but is otherwise equal to 'index'
         
-        if (endex <= 94) {
-            setIndex(index + 5);
-            setEndIndex(endIndex + 5);
+        $(".ulCarousel2").animate({scrollLeft: scroll});
+
+        scrollIndex++;
+    
+        if(scrollIndex > 4) {
+    
+            scrollIndex = 3;
         }
-        setCarouselData(itemArray.slice(index, endIndex));
+    
+        setScroll(spot[scrollIndex]);
+        console.log('index value 1', scrollIndex);
+        
+        setIndex(scrollIndex);
+        console.log('scroll value', scroll);
     }
 
     const previousItems = () => {
 
-        if (index >= 5) {
-            setIndex(index - 5);
-            setEndIndex(endIndex - 5);
-        }
-        setCarouselData(itemArray.slice(index, endIndex));
+        scrollIndex--;
+        
+        if(scrollIndex < 0) {
+            
+            scrollIndex = 1;
+
+        } 
+        setScroll(spot[scrollIndex]);
+        console.log('index value 1', scrollIndex);
+
+        setIndex(scrollIndex);
+        console.log('scroll value', scroll);
+
+        $(".carouselList").animate({scrollLeft: scroll});
+
     }
+
 
     return (
         <div className="mainContainer2">
