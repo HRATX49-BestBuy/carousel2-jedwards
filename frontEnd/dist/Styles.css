@@ -42,6 +42,12 @@
   width: 100%;
 }
 
+/* .carouselBody2 {
+
+  max-width: 1200px;
+} */
+
+
 .carouselHeader2 {
 
   margin: 0;
@@ -92,8 +98,8 @@
 
   display: flex;
   margin: 0 50px;
-  max-width: 1200px;
-  overflow-x: scroll;
+  max-width: 1065px;
+  
   box-sizing: border-box;
 
 }
@@ -296,6 +302,7 @@ svg {
   transition: transform .5s ease-in-out;
   padding: 0;
   margin-top: 0px;
+  overflow-x: scroll;
 
   display: flex;
   list-style-type: disc;
@@ -312,6 +319,7 @@ svg {
   transition: transform .5s ease-in-out;
   padding: 0;
   margin-top: 0px;
+  overflow-x: scroll;
 
   display: flex;
   list-style-type: disc;
@@ -332,7 +340,7 @@ svg {
   visibility: visible;
   padding: 0 0 0 15px;
   list-style: none;
-  margin: 0;
+  margin-left: 15px;
 }
 
 .itemContainer2 {
@@ -343,8 +351,8 @@ svg {
   justify-content: center;
   padding-right: 15px;
   position: relative;
-  min-width: 174px;
-  width: 200px;
+  min-width: 188px;
+  width: 197px;
   max-width: 205px;
   margin: 0;
 
