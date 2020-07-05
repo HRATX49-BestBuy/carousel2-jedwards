@@ -14,7 +14,7 @@ connection.connect((err)=>{
   }
   console.log('Connected to DB')
 });
-
+// retreives all the products from the database to populate component
 const getProducts = (callback) => {
   connection.query('SELECT * FROM product', (error, result) => {
       if (error) {

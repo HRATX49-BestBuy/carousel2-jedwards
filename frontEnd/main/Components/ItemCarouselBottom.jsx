@@ -4,15 +4,15 @@ import $ from 'jquery';
 
 const ItemCarouselBottom = (props) => {
 
-  // index variable for helping to control what items are currently being viewed
+  // creates an array of all the items available in the carousel
   let itemArray = Array.from(props.data);
   itemArray = itemArray.slice(0, 14);
-
+  // controls what position in the item list we are viewing
   const [index, setIndex] = useState(1);
   var scrollIndex = index;
-  // const [endIndex, setendIndex] = useState(9);
+  // controls the state of what items are in the carousel list  
   const [carouselData, setCarouselData] = useState(itemArray);
-  // const [carouselData, setCarouselData] = useState(itemArray.slice(index, endIndex));
+  // array holding the positions that are moved to on click within the slider
   const spot = [0, 1020, 2040];
   const [scroll, setScroll] = useState(spot[1]);
   
@@ -20,8 +20,10 @@ const ItemCarouselBottom = (props) => {
 // functions for controlling the arrow buttons on the side of the carousel
 //========================================================================
     const nextItems = () => {
-      // starts at 0 but is otherwise equal to 'index'
-      
+
+        // there is no scrollRight function
+        // this scrolls the carousel to the specific position
+        // within the spot array
         $(".ulCarousel3").animate({scrollLeft: scroll});
 
         scrollIndex++;
@@ -62,6 +64,7 @@ const ItemCarouselBottom = (props) => {
         <div className="mainContainer2">
             <div className="carouselContainer2">
                 <div className="carouselHeader2">
+                    {/* shows the number of items next to the carousel title */}
                     <h2 className="peopleAlsoBought">People also bought
                     <span className="xItems2">{'(' + carouselData.length + ')'}</span>
                     </h2>
@@ -69,6 +72,7 @@ const ItemCarouselBottom = (props) => {
                 <div className="bottomLine2"></div>
                 <div className="carouselBody2">
                     <div className="carouselChildWrapper2">
+                    {/* the arrows on the side of the carousels that move the carousel through the items array */}
                     <button className="previousButton" onClick={() => previousItems()}>
                         <svg className="svgLeft"><path className="pathLeft"></path></svg>
                     </button>
@@ -80,6 +84,7 @@ const ItemCarouselBottom = (props) => {
                             )
                         })}
                         </ul>
+                    {/* the arrows on the side of the carousels that move the carousel through the items array */}
                     <button className="nextButton" onClick={() => nextItems()}>
                         <svg className="svgRight"><path className="pathRight"></path></svg>
                     </button>

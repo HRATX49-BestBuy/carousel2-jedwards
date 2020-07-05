@@ -7,14 +7,18 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-
+      // two states for products are needed for each carousel
+      // to populate different items
       products: [],
       otherProducts: [],
+      // state that determines whether the components render or not
       loaded: false,
     }
-
+    // gets all the products from the database
     this.getProducts = this.getProducts.bind(this);
+    // renders the carousels or any other element in it after products load
     this.renderCarousel = this.renderCarousel.bind(this);
+    // get the products id on click and sets window.id to its value
     this.getId = this.getId.bind(this);
   }
 
@@ -28,10 +32,10 @@ class App extends Component {
 
     Axios.get('/products2')
       .then( res => {
-
+        // makes two shuffled arrays of the same data
         let products = _.shuffle(res.data);
         let otherProducts = _.shuffle(res.data);
-
+        // set the state of the products then allow the carousels to render to the page
         this.setState({products: products, otherProducts: otherProducts}, () => this.setState({loaded: true}));
       })
       .catch( err => {
@@ -40,6 +44,8 @@ class App extends Component {
       })
   }
   
+  // some components need the id from items clicked within the carousel
+  // this sets the window.id to the clicked items value
   getId(event) {
 
     window.id = event;
@@ -47,6 +53,7 @@ class App extends Component {
     console.log('Here is the window id', window.id);
   }
 
+  // function called that renders the components after the product states are updated
   renderCarousel() {
 
     return(
@@ -62,8 +69,11 @@ class App extends Component {
       return (
         
         <div className="componentContainer">
+          {/* image of the item directly above the two carousels */}
           <img src="https://carouselbundle.s3.us-east-2.amazonaws.com/images/boughtTogether.png" className="boughtTogether"></img>
+          {/* conditional for making the carousels render */}
           {this.state.loaded === true ? this.renderCarousel() : null}
+          {/* incomplete footer section */}
           <div className="footerBacking">
             <img src="https://carouselbundle.s3.us-east-2.amazonaws.com/images/footerBar.png" className="footerBar"></img>
           </div>
