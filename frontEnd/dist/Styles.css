@@ -1,3 +1,9 @@
+body {
+
+  display: flexbox;
+  justify-content: center;
+}
+
 #Carousel2 {
 
   display: flexbox;
@@ -5,6 +11,7 @@
   justify-content: center;
   width: 100%;
   max-width: 1200px;
+  margin: auto;
 
   position: relative;
   min-height: 1px;
@@ -604,16 +611,57 @@ button:focus {
   max-width: 1200px;
 }
 
+.footerBacking {
+
+  display: inline-flex;
+  box-sizing: border-box;
+  justify-content: center;
+  width: 200%;
+  background-color: #0046be;
+  max-height: 110px;
+  min-height: 110px;
+
+  position: absolute;
+  right: -50%;
+  z-index: 99;
+
+}
+
 .footerBar {
 
   width: 100%;
+  min-width: 1000px;
+  max-width: 1500px;
+  max-height: 112px;
+  min-height: 112px;
+  overflow: visible;
+  z-index: 100;
 
 }
+
+.footerBar:focus {
+
+  outline: 0;
+}
+
+/* .carouselContainer2 > .footerBacking {
+  position: relative;
+  right: 50%;
+} */
+
 
 .footer {
 
   max-width: 1200px;
   margin-top: 0px;
+  position: absolute;
+  bottom: -425px;
+}
+
+.footerLinksBacking {
+
+  background-color: #f4f6f9;
+  width: 200%
 }
 
 
