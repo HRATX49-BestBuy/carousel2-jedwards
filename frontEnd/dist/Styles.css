@@ -418,12 +418,18 @@ button:focus {
   font-size: 13px;
   overflow: hidden;
   margin: 0px;
-  line-height: 17px;
+  line-height: 16px;
 
+}
+
+.itemName:hover {
+
+  color: #001e73;
 }
 
 .name:hover {
 
+  color: #001e73;
   text-decoration: underline;
   
 }
@@ -486,6 +492,18 @@ button:focus {
   color: #0457c8;
   cursor: pointer;
   text-align: -webkit-match-parent;
+}
+
+.totalReviews:hover {
+
+  color: #001e73;
+}
+
+.totalReviews:hover {
+
+  color: #001e73;
+  text-decoration: underline;
+  
 }
 
 .itemRating {
