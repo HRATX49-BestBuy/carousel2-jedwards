@@ -91,6 +91,7 @@
   color: #040c13;
   font-family: Human BBY Web,Arial,Helvetica,sans-serif;
   position: relative;
+  left: 30px;
   margin-bottom: 15px;
 }
 
@@ -115,6 +116,7 @@ svg {
 
 .nextButton {
 
+  display: inline-flex;
   background: none;
   border: none;
   fill: #0046be;
@@ -175,6 +177,7 @@ button:focus {
   cursor:pointer;
   display:flex;
   align-items: center;
+  margin-left: 15px;
   fill:rgb(0, 70, 190);
   font-family:bbyicons;
   font-size:50px;
@@ -610,7 +613,7 @@ button:focus {
 .footer {
 
   max-width: 1200px;
-  margin-top: 40px;
+  margin-top: 0px;
 }
 
 
