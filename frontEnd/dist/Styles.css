@@ -601,6 +601,12 @@ button:focus {
   max-width: 1200px;
 }
 
+.footerBar {
+
+  width: 100%;
+
+}
+
 .footer {
 
   max-width: 1200px;

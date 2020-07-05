@@ -64,7 +64,8 @@ class App extends Component {
         <div className="componentContainer">
           <img src="https://carouselbundle.s3.us-east-2.amazonaws.com/images/boughtTogether.png" className="boughtTogether"></img>
           {this.state.loaded === true ? this.renderCarousel() : null}
-          <img src="https://carouselbundle.s3.us-east-2.amazonaws.com/images/footer.png" className="footer"></img>
+          <img src="https://carouselbundle.s3.us-east-2.amazonaws.com/images/footerBar.png" className="footerBar"></img>
+          <img src="https://carouselbundle.s3.us-east-2.amazonaws.com/images/footerLinks.png" className="footer"></img>
         </div>
       )
 
