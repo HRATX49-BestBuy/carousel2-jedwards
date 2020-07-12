@@ -73,13 +73,6 @@ class App extends Component {
           <img src="https://carouselbundle.s3.us-east-2.amazonaws.com/images/boughtTogether.png" className="boughtTogether"></img>
           {/* conditional for making the carousels render */}
           {this.state.loaded === true ? this.renderCarousel() : null}
-          {/* incomplete footer section */}
-          <div className="footerBacking">
-            <img src="https://carouselbundle.s3.us-east-2.amazonaws.com/images/footerBar.png" className="footerBar"></img>
-          </div>
-          <div className="footerLinksBacking">
-            <img src="https://carouselbundle.s3.us-east-2.amazonaws.com/images/footerLinks.png" className="footer"></img>
-          </div>
         </div>
       )
 
