@@ -8,6 +8,7 @@ In this project I led a team of 3 other software engineers who completed the nav
 
 
 Technology used:
+
     React
     Hooks
     JQuery
