@@ -14,12 +14,9 @@ Technology used:
     Node
     Express
     Axios
-
     Material UI
-
     AWS S3
     AWS Elastic Beanstalk
     AWS RDS
     AWS E2
-
     Trello
